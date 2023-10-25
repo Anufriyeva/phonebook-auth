@@ -22,6 +22,7 @@ const Filter = () => {
           type="text"
           value={filter}
           onChange={handleChange}
+          placeholder="Are you looking for someone?"
         />
       </Label>
     </div>
