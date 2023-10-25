@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/phonebook-auth/static/css/main.07ecd8de.css",
+    "main.js": "/phonebook-auth/static/js/main.4ddbe14a.js",
+    "index.html": "/phonebook-auth/index.html",
+    "main.07ecd8de.css.map": "/phonebook-auth/static/css/main.07ecd8de.css.map",
+    "main.4ddbe14a.js.map": "/phonebook-auth/static/js/main.4ddbe14a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.07ecd8de.css",
+    "static/js/main.4ddbe14a.js"
+  ]
+}
