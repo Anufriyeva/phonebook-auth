@@ -1,4 +1,4 @@
-import React, { lazy, useEffect } from 'react';
+import React, { lazy } from 'react';
 // import ContactForm from './ContactForm/ContactForm';
 // import ContactList from './ContactList/ContactList';
 // import Filter from './Filter/Filter';

@@ -1,7 +1,7 @@
 import RegisterForm from "components/RegisterForm/RegisterForm";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { getToken } from "store/selectors";
 import { signUp } from "store/thunk";
 

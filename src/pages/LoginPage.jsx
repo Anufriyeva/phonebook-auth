@@ -1,7 +1,7 @@
 import LoginForm from "components/LoginForm/LoginForm";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { getToken } from "store/selectors";
 import { signIn } from "store/thunk";
 
