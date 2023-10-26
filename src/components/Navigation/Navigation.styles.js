@@ -1,12 +1,5 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
-
-
-export const NavContainer = styled.div`
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 20px;
-`;
 
 export const Link = styled(NavLink)`
   display: inline-block;

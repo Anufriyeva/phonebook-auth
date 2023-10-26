@@ -2,9 +2,11 @@ import React from 'react';
 import { useNavigate } from 'react-router';
 import { useDispatch, useSelector } from "react-redux";
 import { SubmitButton, Text, UserMenuContainer } from './UserMenu.styles';
+import { deleteToken, logOut } from 'store/thunk';
+import { getUserData } from 'store/selectors';
 
 const UserMenu = () => {
-  const user = useSelector(getUserData);
+  const {name} = useSelector(getUserData);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const handleClick = e => {
@@ -15,7 +17,7 @@ const UserMenu = () => {
   };
   return (
 <UserMenuContainer>
-      <Text>Welcome {user.name} </Text>
+      <Text>Welcome {name} </Text>
       <SubmitButton type="button" onClick={handleClick}>
         LOGOUT
       </SubmitButton>

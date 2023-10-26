@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { LoginFormContainer, Form, Input, SubmitButton, Label } from './LoginForm.styles';
+import { signIn } from 'store/thunk';
 
 const LoginForm = () => {
     const dispatch = useDispatch();
@@ -9,7 +10,7 @@ const LoginForm = () => {
         const form = event.currentTarget;
       
         dispatch(
-            logIn({
+            signIn({
                 email: form.elements.email.value,
                 password: form.elements.password.value,
             })

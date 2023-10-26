@@ -3,6 +3,8 @@ import ContactList from "components/ContactList/ContactList";
 import Filter from "components/Filter/Filter";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { getContacts } from "store/selectors";
+import { fetchContacts } from "store/thunk";
 
 const ContactsPage = () => {
     const dispatch = useDispatch();

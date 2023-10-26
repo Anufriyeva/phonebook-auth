@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { RegisterFormContainer, Form, Input, SubmitButton, Label } from './RegisterForm.styles';
+import { signUp } from 'store/thunk';
 
 const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -8,8 +9,8 @@ const RegisterForm = () => {
     event.preventDefault();
     const form = event.currentTarget;
       
-        dispatch(
-      register({
+    dispatch(
+      signUp ({
         name: form.elements.name.value,
         email: form.elements.email.value,
         password: form.elements.password.value,

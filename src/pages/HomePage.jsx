@@ -1,8 +1,10 @@
-import { SigninLink } from "./HomePage.styles"
+import { HomeContainer, Title } from "./HomePage.styles"
 
 const HomePage = () => {
     return (
-        <SigninLink to="/login">Sign in</SigninLink>
+        <HomeContainer>
+      <Title>Welcome to Phonebook!</Title>
+    </HomeContainer>
     )
 }
 

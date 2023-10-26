@@ -1,12 +1,16 @@
-import styled from "styled-components";
-import { NavLink } from "react-router-dom";
+import styled from 'styled-components';
 
+export const HomeContainer = styled.div`
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+`;
 
-export const SigninLink = styled(NavLink)`
-padding: 8px 16px;
-border-radius: 4px;
-text-decoration: none;
-color: white;
-font-weight: 500;
-font-size: 24px;
-background-color: gray;`
+export const Title = styled.h1`
+  font-weight: 800;
+  font-size: 48;
+  text-align: center;
+  color: #f08080;
+`;

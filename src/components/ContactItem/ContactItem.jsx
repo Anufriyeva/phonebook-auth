@@ -18,7 +18,7 @@ const ContactItem = ({ contact }) => {
         <ContactName>Name: {contact.name}</ContactName>
         <DeleteButton onClick={handleDelete}>Delete</DeleteButton>
       </ContactInfo>
-      <ContactNumber>Phone: {contact.phone}</ContactNumber>
+      <ContactNumber>Phone: {contact.number}</ContactNumber>
     </ContactItemContainer>
   );
 };
