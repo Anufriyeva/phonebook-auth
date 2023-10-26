@@ -2,6 +2,8 @@ import RegisterForm from "components/RegisterForm/RegisterForm";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from 'react-router-dom';
+import { getToken } from "store/selectors";
+import { signUp } from "store/thunk";
 
 const RegisterPage = () => {
     const isAuth = useSelector(getToken);
@@ -9,23 +11,17 @@ const RegisterPage = () => {
     const dispatch = useDispatch();
 
     const registration = (params) => {
-
-
-        dispatch(signUpUser(params))
-
+        dispatch(signUp(params))
     }
     useEffect(() => {
         isAuth && navigate('/contacts')
     }, [isAuth, navigate])
-
     return (
-
         <>
-            <RegisterForm registration={registration} />
+        <RegisterForm registration={registration} />
             <div>
-					<Link to='/login'>Login</Link>
-				</div>
-            
+				<Link to='/login'>Login</Link>
+			</div>         
         </>
     )
 }

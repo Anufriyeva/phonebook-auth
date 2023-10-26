@@ -2,6 +2,8 @@ import LoginForm from "components/LoginForm/LoginForm";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from 'react-router-dom'
+import { getToken } from "store/selectors";
+import { signIn } from "store/thunk";
 
 const LoginPage = () => {
     const dispatch = useDispatch();
@@ -9,7 +11,7 @@ const LoginPage = () => {
     const navigate = useNavigate();
 
     const loginUser = (params) => {
-        dispatch(signInUser(params))
+        dispatch(signIn(params))
     }
 
     useEffect(() => {
@@ -17,10 +19,11 @@ const LoginPage = () => {
     }, [isAuth, navigate])
 
     return (
-        <> <LoginForm loginUser={loginUser} />  
+        <>
+            <LoginForm loginUser={loginUser} />  
         <div>
-					<Link to='/register'>Sign Up</Link>
-				</div>    
+			<Link to='/register'>Sign Up</Link>
+		</div>    
         </>
 
     )
