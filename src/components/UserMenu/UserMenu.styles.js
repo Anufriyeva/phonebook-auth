@@ -8,19 +8,25 @@ export const UserMenuContainer = styled.div`
 
 export const Text = styled.p`
   font-weight: 700;
-  color: #f08080;
+  color: #df3b01;
   font-size: 20px;
+`;
+export const UserName = styled.p`
+  font-size: 20px;
+  color: #000;
+  font-weight: bold;
+  font-style: italic;
 `;
 
 export const SubmitButton = styled.button`
-  background-color: #35abde;
+  background-color: #df3b01;
   color: #fff;
-  font-size: 16px;
+  font-size: 18px;
   border: none;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
   &:hover {
-    background-color: #0c7fb0;
+    background-color: #ff7f50;
   }
 `;

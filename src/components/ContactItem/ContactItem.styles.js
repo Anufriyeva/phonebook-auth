@@ -20,13 +20,13 @@ export const ContactNumber = styled.p`
 `;
 
 export const DeleteButton = styled.button`
-  background-color: #ff0000;
+  background-color: #5dacc9;
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   padding: 5px 10px;
   cursor: pointer;
   &:hover {
-    background-color: #cc2525;
+    background-color: #3897ba;
   }
 `;

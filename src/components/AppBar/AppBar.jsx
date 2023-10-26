@@ -10,7 +10,6 @@ const AppBar = () => {
 
   return (
     <HeaderContainer>
-      <h1>Personal phonebook</h1>
       <Navigation />
       {isAuth ? <UserMenu /> : <AuthNav />}
     </HeaderContainer>

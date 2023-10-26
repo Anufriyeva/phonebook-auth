@@ -22,7 +22,7 @@ const LoginPage = () => {
         <>
             <LoginForm loginUser={loginUser} />  
         <div>
-			<Link to='/register'>Sign Up</Link>
+			{/* <Link to='/register'>Sign Up</Link> */}
 		</div>    
         </>
 

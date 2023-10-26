@@ -17,12 +17,12 @@ const Filter = () => {
   return (
     <div>
       <Label>
-        Filter contacts by name:
+        Find contacts by name:
         <Input
           type="text"
           value={filter}
           onChange={handleChange}
-          placeholder="Are you looking for someone?"
+          placeholder="Looking for someone?"
         />
       </Label>
     </div>

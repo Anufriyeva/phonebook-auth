@@ -21,19 +21,19 @@ export const Input = styled.input`
   padding: 10px;
   margin-bottom: 10px;
   margin-left: 10px;
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
   border-radius: 5px;
 `;
 
 export const SubmitButton = styled.button`
-  background-color: #35abde;
+  background-color: #df3b01;
   color: #fff;
-  font-size: 16px;
+  font-size: 18px;
   border: none;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
   &:hover {
-    background-color: #0c7fb0;
+    background-color: #ff7f50;
   }
 `;

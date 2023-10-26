@@ -1,8 +1,12 @@
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.header`
-  background-color: #1e1e1f;
-  color: white;
-  padding: 10px;
-  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  /* justify-content: center; */
 `;
+

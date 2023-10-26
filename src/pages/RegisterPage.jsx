@@ -20,7 +20,7 @@ const RegisterPage = () => {
         <>
         <RegisterForm registration={registration} />
             <div>
-				<Link to='/login'>Login</Link>
+				{/* <Link to='/login'>Login</Link> */}
 			</div>         
         </>
     )
