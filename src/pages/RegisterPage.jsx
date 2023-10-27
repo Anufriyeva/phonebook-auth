@@ -6,16 +6,16 @@ import { getToken } from "store/selectors";
 import { signUp } from "store/thunk";
 
 const RegisterPage = () => {
-    const isAuth = useSelector(getToken);
-    const navigate = useNavigate();
+    // const isAuth = useSelector(getToken);
+    // const navigate = useNavigate();
     const dispatch = useDispatch();
 
     const registration = (params) => {
         dispatch(signUp(params))
     }
-    useEffect(() => {
-        isAuth && navigate('/contacts')
-    }, [isAuth, navigate])
+    // useEffect(() => {
+    //     isAuth && navigate('/contacts')
+    // }, [isAuth, navigate])
     return (
         <>
         <RegisterForm registration={registration} />

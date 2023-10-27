@@ -4,13 +4,21 @@ import axios from "axios";
 axios.defaults.baseURL = "https://connections-api.herokuapp.com";
 
 
-const setToken = (token) => {
-    axios.defaults.headers.common['Authorization'] = token;
+// const setToken = (token) => {
+//     axios.defaults.headers.common['Authorization'] = token;
+// };
+
+const setToken = token => {
+  axios.defaults.headers.common.Authorization = `Bearer ${token}`;
 };
 
 
-export const deleteToken = (token) => {
-    delete axios.defaults.headers.common['Authorization']
+// export const deleteToken = (token) => {
+//     delete axios.defaults.headers.common['Authorization']
+// };
+
+export const deleteToken = () => {
+  axios.defaults.headers.common.Authorization = '';
 };
 
 export const signUp = createAsyncThunk(
@@ -44,29 +52,48 @@ export const logOut = createAsyncThunk(
     async (_, thunkAPI) => {
         try {
             const { data } = await axios.post("/users/logout");
+            deleteToken();
             return data;
         } catch (e) {
-            console.error("Logout error:", e.response.data);
+            // console.error("Logout error:", e.response.data);
 
             return thunkAPI.rejectWithValue(e.message);
         }
     }
 )
 
-export const getCurrent = createAsyncThunk(
-    "authUser/getCurrent",
+// export const getCurrent = createAsyncThunk(
+//     "authUser/getCurrent",
+//     async (_, thunkAPI) => {
+//         const state = thunkAPI.getState();
+
+//         setToken(state.authUser.token);
+//         try {
+//             const { data } = await axios.get("/users/current");
+//             return data;
+//         } catch (e) {
+//             return thunkAPI.rejectWithValue(e.message);
+//         }
+//     }
+// )
+
+export const refresh = createAsyncThunk(
+    'auth/refresh',
     async (_, thunkAPI) => {
-        const state = thunkAPI.getState();
+  const state = thunkAPI.getState();
+  const token = state.authUser.token;
+  if (!token) {
+    return thunkAPI.rejectWithValue('User not found');
+  }
 
-        setToken(state.authUser.token);
-        try {
-            const { data } = await axios.get("/users/current");
-            return data;
-        } catch (e) {
-            return thunkAPI.rejectWithValue(e.message);
-        }
-    }
-)
+  try {
+    setToken(token);
+    const { data } = await axios.get(`/users/current`);
+    return data;
+  } catch (error) {
+    return thunkAPI.rejectWithValue(error.message);
+  }
+});
 
 
 export const fetchContacts = createAsyncThunk(

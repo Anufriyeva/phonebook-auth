@@ -7,16 +7,16 @@ import { signIn } from "store/thunk";
 
 const LoginPage = () => {
     const dispatch = useDispatch();
-    const isAuth = useSelector(getToken);
-    const navigate = useNavigate();
+    // const isAuth = useSelector(getToken);
+    // const navigate = useNavigate();
 
     const loginUser = (params) => {
         dispatch(signIn(params))
     }
 
-    useEffect(() => {
-        isAuth && navigate('/contacts')
-    }, [isAuth, navigate])
+    // useEffect(() => {
+    //     isAuth && navigate('/contacts')
+    // }, [isAuth, navigate])
 
     return (
         <>

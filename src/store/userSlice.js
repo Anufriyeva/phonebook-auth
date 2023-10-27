@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getCurrent, logOut, signIn, signUp } from './thunk';
+import { logOut, refresh, signIn, signUp } from './thunk';
 
 
 const initialState = {
@@ -18,7 +18,7 @@ const userSlice = createSlice({
     extraReducers: (builder) => {
         builder
             .addCase(signUp.fulfilled, handleFulfilled)
-            .addCase(getCurrent.fulfilled, (state, { payload }) => {
+            .addCase(refresh.fulfilled, (state, { payload }) => {
                 state.user = payload;
             }
             )

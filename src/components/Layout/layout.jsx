@@ -3,12 +3,12 @@ import { useDispatch } from "react-redux";
 import { LayoutContainer } from "./Layout.styles";
 import AppBar from "components/AppBar/AppBar";
 import { Outlet } from "react-router-dom";
-import { getCurrent } from "store/thunk";
+import { refresh } from "store/thunk";
 
 const Layout = () => {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getCurrent())
+    dispatch(refresh())
       .unwrap()
       .then()
       .catch(e => console.log(e));
